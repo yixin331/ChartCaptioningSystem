@@ -1,0 +1,8 @@
+//{
+//    "mongoURI" : " mongodb+srv://Admin:ciaociao@captions-collector-cluster-aognl.mongodb.net/test?retryWrites=true&w=majority",
+//    "jwtSecret" : "sl_myJwtSecret"
+//}
+{
+    "mongoURI" : "mongodb+srv://helen_test:ciaociao@cluster0.nac2g.mongodb.net/test?retryWrites=true&w=majority"
+}
+
