@@ -299,7 +299,7 @@ class CaptionModal extends Component {
                             <hr></hr>
                             <b>Important notes:</b> <br/>
                             - Try to describe it using less than 75 words, usually 50-60 words are enough. <br/>
-                            - It would be extremely appreciated if you can accomplish the task more than once: 3 or more times is ideal. <br/>
+                            - It would be extremely appreciated if you can accomplish the task more than once: 5 or more times is ideal. <br/>
                             - Once you submit the form, if you click on "Submit a new caption" the system will display you a new data chart figure to describe. <br/> 
                             - Click on the data chart image to zoom in/out. <br/>
                             - Click on the following button if you would like to see some vocabulary which might help you attending the task. <br/> </div>
