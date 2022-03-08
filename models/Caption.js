@@ -46,6 +46,10 @@ const CaptionSchema = new Schema({
   date: {
     type: Date,
     default: Date.now
+  },
+
+  student_id: {
+    type: String,
   }
   
 });

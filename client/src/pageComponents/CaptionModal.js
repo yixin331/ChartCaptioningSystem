@@ -35,7 +35,7 @@ class CaptionModal extends Component {
             errors: [],
             initialized : false,
             current_image_id : -1,
-            current_image_filename : "1.png",
+            current_image_filename : "101.png",
             caption_content : "",
             age : "",
             gender : "",
@@ -44,7 +44,8 @@ class CaptionModal extends Component {
             eng_certif_res : "",
             eng_nat_speaker : "",
             start_time : "",
-            modal : false
+            modal : false,
+            student_id : ""
         }
       }
   
@@ -56,7 +57,7 @@ class CaptionModal extends Component {
         const { captions } = this.props.caption;
         this.props.getCaptions();
 
-        for (var i = 1; i < 101; i++) {
+        for (var i = 101; i < 201; i++) {
             items.push(i + ".png")
           }
 
@@ -117,7 +118,8 @@ class CaptionModal extends Component {
             eng_certif : this.state.eng_certif,
             eng_certif_res : this.state.eng_certif_res,
             eng_nat_speaker : this.state.eng_nat_speaker,
-            total_time : total_time_f
+            total_time : total_time_f,
+            student_id : this.state.student_id
         }
 
         const errors = formValidation(newCaption);
@@ -165,6 +167,10 @@ class CaptionModal extends Component {
                             <Jumbotron style={{ marginTop: '-2rem', marginLeft: '1rem', marginRight: '1rem', marginBottom: '-1rem'}}>
                                 <h4> Personal Details </h4>    
                                 <hr/>
+
+                                <Label for="student_id">Please enter your UBC student ID if you have one.</Label>
+                                <Input type="text" name="student_id" id="student_id" placeholder="" onChange={this.onChange}>
+                                </Input>
 
                                 <Label for="age">What is your age?</Label>
                                     <Input type="select" name="age" id="age" placeholder=" -- select an option -- " onChange={this.onChange}>
@@ -336,13 +342,13 @@ class CaptionModal extends Component {
                                     <div class="col-12 col-md-6"  align="left">
                                         <ImageZoom
                                         image={{
-                                            src: require('../media/Plots_Collection/' + this.state.current_image_filename),
+                                            src: require('../media/Plots_Collection_new/' + this.state.current_image_filename),
                                             alt: 'Pic not available',
                                             className: 'img',
                                             style: { width: '100%' }
                                         }}
                                         zoomImage={{
-                                            src:  require('../media/Plots_Collection/' + this.state.current_image_filename),
+                                            src:  require('../media/Plots_Collection_new/' + this.state.current_image_filename),
                                             alt: 'Pic not available'
                                         }}
                                         />

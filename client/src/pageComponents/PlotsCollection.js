@@ -3,7 +3,7 @@ import { Container, Jumbotron, ListGroup, ListGroupItem} from 'reactstrap';
 import { connect } from 'react-redux';
 import NavbarApp from './Navbar.js';
 import { Row, Col } from 'reactstrap';
-import myJson from '../media/JSON_Files/Plots_Information.json';
+import myJson from '../media/JSON_Files/Plots_Information_new.json';
 import ImageZoom from 'react-medium-image-zoom'
 
 class PlotsCollection extends Component {
@@ -11,7 +11,7 @@ class PlotsCollection extends Component {
     render() {
         
         var items = []
-        for (var i = 1; i < 101; i++) {
+        for (var i = 101; i < 201; i++) {
             items.push(<li key={i}>{i + ".png"}</li>)
           }
 
@@ -38,13 +38,13 @@ class PlotsCollection extends Component {
                                 <div class="col-12 col-md-8" align="center">
                                     <ImageZoom
                                         image={{
-                                            src: require('../media/Plots_Collection/' + key + '.png'),
+                                            src: require('../media/Plots_Collection_new/' + key + '.png'),
                                             alt: 'Pic not available',
                                             className: 'img',
                                             style: { width: '70%' }
                                         }}
                                         zoomImage={{
-                                            src:  require('../media/Plots_Collection/' + key + '.png'),
+                                            src:  require('../media/Plots_Collection_new/' + key + '.png'),
                                             alt: 'Pic not available'
                                         }}
                                     />
@@ -58,6 +58,7 @@ class PlotsCollection extends Component {
                                     <li> <b> Year: </b> {myJson[key]["year"]} </li>
                                     <li> <b> Location: </b> {myJson[key]["geo"]} </li>
                                     <li> <b> Unit of Measure: </b> {myJson[key]["unit_of_measure"]}</li>
+                                    <li> <b> Scale: </b> {myJson[key]["scale"]}</li>
                                     <li> <b> Source: </b> <url> https://www150.statcan.gc.ca </url></li>
                                     </div>
                                 </div>
