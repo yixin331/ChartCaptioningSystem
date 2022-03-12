@@ -15,6 +15,7 @@ This MERN stack web application is designed as a collector of captions.
 1. Add 100 new time series line charts
 2. Change the schema to record student id and show the scale of the charts
 3. Change the mongodb connection
+4. The application is deployed to https://chart-captioning-system.herokuapp.com/
 
 ### How to test locally
 In the project directory, you can run:
